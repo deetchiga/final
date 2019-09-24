@@ -7,7 +7,7 @@ server:
 spring:
   datasource:
     project1:
-      jdbcurl: jdbc:postgresql://localhost:5432/project1
+      jdbcurl: jdbc:postgresql://localhost:5432/project1?createDatabaseIfNotExist=true&autoReconnect=true
       driverClassName: org.postgresql.Driver
       dialect: org.hibernate.dialect.PostgreSQLDialect
       username: postgres
