@@ -94,14 +94,14 @@ public class mammoModel {
     }
 
     public String getLastName() {
-        return FirstName;
+        return LastName;
     }
     public void setLastName(String LastName) {
-        this.LastName = FirstName;
+        this.LastName = LastName;
     }
 
     public String getDoctor() {
-        return LastName;
+        return Doctor;
     }
     public void setDoctor(String Doctor) { this.Doctor = Doctor; }
 
@@ -166,7 +166,7 @@ public class mammoModel {
     public void setBSComplaint(String BSComplaint){ this.BSComplaint=BSComplaint; }
 
     public Boolean getSkinDimp(){ return SkinDimp; }
-    public void setSkinDimp(Boolean SkinDimop){ this.SkinDimp=SkinDimp;}
+    public void setSkinDimp(Boolean SkinDimp){ this.SkinDimp=SkinDimp;}
 
     public Boolean getNR(){ return NR; }
     public void setNR(Boolean NR){ this.NR=NR; }

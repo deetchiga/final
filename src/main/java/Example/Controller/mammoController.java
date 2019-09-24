@@ -21,6 +21,7 @@ public class mammoController{
 
         cancerDetails.setFirstName(cancerDetails.getFirstName());
         cancerDetails.setLastName(cancerDetails.getLastName());
+        cancerDetails.setPhoneNo(cancerDetails.getPhoneNo());
         cancerDetails.setDoctor(cancerDetails.getDoctor());
         cancerDetails.setRegion(cancerDetails.getRegion());
         cancerDetails.setNOC(cancerDetails.getNOC());
