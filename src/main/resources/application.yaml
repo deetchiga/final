@@ -6,12 +6,11 @@ server:
   profiles: development
 spring:
   datasource:
-    project1:
-      jdbcurl: jdbc:postgresql://localhost:5432/project1?createDatabaseIfNotExist=true&autoReconnect=true
+      jdbcUrl: jdbc:postgresql://localhost:5432/project1
       driverClassName: org.postgresql.Driver
       dialect: org.hibernate.dialect.PostgreSQLDialect
       username: postgres
-      password: postgres
+      password: $Tidelpark2018
       tomcat:
         maxActive: 377
         maxWait: 30000
@@ -26,4 +25,9 @@ spring:
         removeAbandoned: true
         removeAbandonedTimeout: 55
 
-
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update

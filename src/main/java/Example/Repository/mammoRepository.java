@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface mammoRepository extends JpaRepository<mammoModel, Long> {
 
-
+    String details="SELECT name from Bahamas_Island";
 
 }

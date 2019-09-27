@@ -10,75 +10,95 @@ import java.util.Date;
 public class mammoModel {
 
     @Id
-    @GeneratedValue(generator = "answer_generator")
+    @GeneratedValue(generator = "id_generator")
     @SequenceGenerator(
-            name = "answer_generator",
-            sequenceName = "answer_sequence",
-            initialValue = 1000
+            name = "id_generator",
+            sequenceName = "id_sequence",
+            initialValue = 1
     )
     private Long id;
 
-    @Column(columnDefinition = "FirstName")
-    private String FirstName;
-    @Column(columnDefinition = "LastName")
-    private String LastName;
-    @Column(columnDefinition = "PhoneNo")
-    private Number PhoneNo;
-    @Column(columnDefinition = "Doctor")
-    private String Doctor;
-    @Column(columnDefinition = "Region")
-    private String Region;
-    @Column(columnDefinition = "NOC")
-    private Number NOC;
-    @Column(columnDefinition = "NOPREG")
-    private Number NOPREG;
-    @Column(columnDefinition = "AgeFP")
-    private Number AgeFP;
-    @Column(columnDefinition = "AYPreg")
-    private Boolean AYPreg;
-    @Column(columnDefinition = "LPeriodDate")
-    private Date LPeriodDate;
-    @Column(columnDefinition = "BC")
-    private Boolean BC;
-    @Column(columnDefinition = "BirthCtrlD")
-    private Number BirthCtrlD;
-    @Column(columnDefinition = "HRep")
-    private Boolean HRep;
-    @Column(columnDefinition = "BS")
-    private Boolean BS;
-    @Column(columnDefinition = "BSDate")
-    private Date BSDate;
-    @Column(columnDefinition = "Brs")
-    private String Brs;
-    @Column(columnDefinition = "BSRad")
-    private Boolean BSRad;
-    @Column(columnDefinition = "BSRadDate")
-    private Date BSRadDate;
-    @Column(columnDefinition = "BrsRad")
-    private String BrsRad;
-    @Column(columnDefinition = "Chemo")
-    private Boolean Chemo;
-    @Column(columnDefinition = "ChemoS")
-    private String ChemoS;
-    @Column(columnDefinition = "RC")
-    private Boolean RC;
-    @Column(columnDefinition = "BSComplaint")
-    private String BSComplaint;
-    @Column(columnDefinition = "SkinDimp")
-    private Boolean SkinDimp;
-    @Column(columnDefinition = "NR")
-    private Boolean NR;
-    @Column(columnDefinition = "Discharge")
-    private Boolean Discharge;
-    @Column(columnDefinition = "CDischarge")
-    private String CDischarge;
-    @Column(columnDefinition = "History")
-    private Boolean History;
-    @Column(columnDefinition = "HisBC")
-    private String HisBC;
 
+    private String FirstName;
+
+    private String LastName;
+
+    private Long PhoneNo;
+
+    private String Doctor;
+
+    private String Region;
+
+    private Long NOC;
+
+    private Long NOPREG;
+
+    private Long AgeFP;
+
+    private Boolean AYPREG;
+
+    private Date LPeriodDate;
+
+    private Boolean BC;
+
+    private Long BirthCtrlD;
+
+    private Boolean HRep;
+
+    private Boolean BS;
+
+    private Date BSDate;
+
+    private Boolean leftbs;
+
+    private Boolean rightbs;
+
+    private Boolean bothbs;
+
+    private Boolean BSRad;
+
+    private Date BSRadDate;
+
+    private Boolean leftbrs;
+
+    private Boolean rightbrs;
+
+    private Boolean bothbrs;
+
+    private Boolean Chemo;
+
+    private String ChemoS;
+
+    private Boolean RC;
+
+    private String BSComplaint;
+
+    private Boolean SkinDimp;
+
+    private Boolean NR;
+
+    private Boolean Discharge;
+
+    private String CDischarge;
+
+    private Boolean History;
+
+    private Boolean mother;
+
+    private Boolean fatherside;
+
+    private Boolean daughter;
+
+    private Boolean sister;
+
+    private Boolean gm;
+
+    private Boolean mside;
+
+    private Boolean aunt;
 
     @OnDelete(action = OnDeleteAction.CASCADE)
+
     public Long getId() {
         return id;
     }
@@ -105,23 +125,23 @@ public class mammoModel {
     }
     public void setDoctor(String Doctor) { this.Doctor = Doctor; }
 
-    public Number getPhoneNo(){return PhoneNo;}
-    public void setPhoneNo(Number PhoneNo){ this.PhoneNo=PhoneNo; }
+    public Long getPhoneNo(){return PhoneNo;}
+    public void setPhoneNo(Long PhoneNo){ this.PhoneNo=PhoneNo; }
 
     public String getRegion(){ return Region; }
     public void setRegion(String Region){ this.Region=Region; }
 
-    public Number getNOC(){ return NOC; }
-    public void setNOC(Number NOC){ this.NOC=NOC; }
+    public Long getNOC(){ return NOC; }
+    public void setNOC(Long NOC){ this.NOC=NOC; }
 
-    public Number getNOPREG(){ return NOPREG; }
-    public void setNOPREG(Number NOPREG){ this.NOPREG=NOPREG; }
+    public Long getNOPREG(){ return NOPREG; }
+    public void setNOPREG(Long NOPREG){ this.NOPREG=NOPREG; }
 
-    public Number getAgeFP(){ return AgeFP; }
-    public void setAgeFP(Number AgeFP){this.AgeFP=AgeFP; }
+    public Long getAgeFP(){ return AgeFP; }
+    public void setAgeFP(Long AgeFP){this.AgeFP=AgeFP; }
 
-    public Boolean getAYPreg(){ return AYPreg; }
-    public void setAYPreg(Boolean AYPreg){ this.AYPreg=AYPreg; }
+    public Boolean getAYPREG(){ return AYPREG; }
+    public void setAYPREG (Boolean AYPREG){ this.AYPREG = AYPREG; }
 
     public Date getLPeriodDate(){ return LPeriodDate; }
     public void setLPeriodDate(Date LPeriodDate){ this.LPeriodDate=LPeriodDate; }
@@ -129,8 +149,8 @@ public class mammoModel {
     public Boolean getBC(){ return BC; }
     public void setBC(Boolean BC){ this.BC=BC; }
 
-    public Number getBirthCtrlD(){ return BirthCtrlD; }
-    public void setBirthCtrlD(Number BirthCtrlD){ this.BirthCtrlD=BirthCtrlD; }
+    public Long getBirthCtrlD(){ return BirthCtrlD; }
+    public void setBirthCtrlD(Long BirthCtrlD){ this.BirthCtrlD=BirthCtrlD; }
 
     public Boolean getHRep(){ return HRep; }
     public void setHRep(Boolean HRep){ this.HRep=HRep; }
@@ -141,8 +161,14 @@ public class mammoModel {
     public Date getBSDate(){ return BSDate; }
     public void setBSDate(Date BSDate){ this.BSDate=BSDate; }
 
-    public String getBrs(){ return Brs; }
-    public void setBrs(String Brs){ this.Brs=Brs; }
+    public Boolean getleftbs(){ return leftbs; }
+    public void setleftbs(Boolean leftbs){ this.leftbs=leftbs; }
+
+    public Boolean getrightbs(){ return rightbs; }
+    public void setrightbs(Boolean rightbs){ this.rightbs=rightbs; }
+
+    public Boolean getbothbs(){ return bothbs; }
+    public void setbothbs(Boolean bothbs){ this.bothbs=bothbs; }
 
     public Boolean getBSRad(){ return BSRad; }
     public void setBSRad(Boolean BSRad){ this.BSRad=BSRad; }
@@ -150,8 +176,14 @@ public class mammoModel {
     public Date getBSRadDate(){ return BSRadDate; }
     public void setBSRadDate(Date BSRadDate){ this.BSRadDate=BSRadDate; }
 
-    public String getBrsRad(){ return  BrsRad; }
-    public void setBrsRad(String BrsRad){ this.BrsRad=BrsRad; }
+    public Boolean getleftbrs(){ return leftbrs; }
+    public void setleftbrs(Boolean leftbrs){ this.leftbrs=leftbrs; }
+
+    public Boolean getrightbrs(){ return rightbrs; }
+    public void setrightbrs(Boolean rightbrs){ this.rightbrs=rightbrs; }
+
+    public Boolean getbothbrs(){ return bothbrs; }
+    public void setbothbrs(Boolean bothbrs){ this.bothbrs=bothbrs; }
 
     public Boolean getChemo(){ return Chemo; }
     public void setChemo(Boolean Chemo){ this.Chemo=Chemo; }
@@ -180,8 +212,27 @@ public class mammoModel {
     public Boolean getHistory(){ return History; }
     public void setHistory(Boolean History){ this.History=History; }
 
-    public String getHisBC(){ return HisBC; }
-    public void setHisBC(String HisBC){ this.HisBC=HisBC; }
+    public Boolean getmother(){ return mother; }
+    public void setmother(Boolean mother){ this.mother=mother; }
+
+    public Boolean getfatherside(){ return fatherside; }
+    public void setFatherside(Boolean fatherside){ this.fatherside=fatherside; }
+
+    public Boolean getdaughter(){ return daughter; }
+    public void setdaughter(Boolean daughter){ this.daughter=daughter; }
+
+    public Boolean getsister(){ return sister; }
+    public void setsister(Boolean sister){ this.sister=sister; }
+
+    public Boolean getmside(){ return mside; }
+    public void setmside(Boolean mside){ this.mside=mside; }
+
+    public Boolean getgm(){ return gm; }
+    public void setgm(Boolean gm){ this.gm=gm; }
+
+    public Boolean getaunt(){ return aunt; }
+    public void setaunt(Boolean aunt){ this.aunt=aunt; }
+
 
 }
 
